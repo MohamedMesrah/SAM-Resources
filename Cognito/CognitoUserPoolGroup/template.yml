@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Cognito User Pool Group
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html
+  CognitoUserPoolGroup:
+    Type: AWS::Cognito::UserPoolGroup
+    Properties: 
+      Description: String
+      GroupName: String
+      Precedence: Double
+      RoleArn: String
+      UserPoolId: String

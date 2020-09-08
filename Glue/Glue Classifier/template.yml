@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Glue Classifier
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html
+
+Resources:
+  GlueClassifier:
+    Type: AWS::Glue::Classifier
+    Properties: 
+      CsvClassifier: 
+        CsvClassifier
+      GrokClassifier: 
+        GrokClassifier
+      JsonClassifier: 
+        JsonClassifier
+      XMLClassifier: 
+        XMLClassifier

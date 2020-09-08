@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Glue Database
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html
+
+Resources:
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties: 
+      CatalogId: String
+      DatabaseInput: 
+        DatabaseInput

@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: SES Template
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html
+
+Resources:
+  SESTemplate:
+    Type: AWS::SES::Template
+    Properties: 
+      Template: 
+          HtmlPart: String
+          SubjectPart: String
+          TemplateName: String
+          TextPart: String

@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: SQS Queue Policy
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html
+
+Resources:
+  SQSQueuePolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties: 
+      PolicyDocument: Json
+      Queues: 
+        - String

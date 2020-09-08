@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Serverless State Machine
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html
+
+Resources:
+  StateMachine:
+    Type: AWS::Serverless::StateMachine
+    Properties:
+      Definition: Map
+      DefinitionSubstitutions: Map
+      DefinitionUri: String | S3Location
+      Events: EventSource
+      Logging: LoggingConfiguration
+      Name: String
+      Policies: String | List | Map
+      Role: String
+      Tags: Map
+      Type: String

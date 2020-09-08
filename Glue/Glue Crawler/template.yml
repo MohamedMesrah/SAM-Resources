@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Glue Crawler
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html
+
+Resources:
+  GlueCrawler:
+    Type: AWS::Glue::Crawler
+    Properties: 
+      Classifiers: 
+        - String
+      Configuration: String
+      CrawlerSecurityConfiguration: String
+      DatabaseName: String
+      Description: String
+      Name: String
+      Role: String
+      Schedule: 
+        Schedule
+      SchemaChangePolicy: 
+        SchemaChangePolicy
+      TablePrefix: String
+      Tags: Json
+      Targets: 
+        Targets

@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Cognito User Pool User To Group Attachment
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html
+  CognitoUserPoolUserToGroupAttachment:
+    Type: AWS::Cognito::UserPoolUserToGroupAttachment
+    Properties: 
+      GroupName: String
+      Username: String
+      UserPoolId: String
+

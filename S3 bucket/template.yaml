@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: S3 Bucket
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      AccelerateConfiguration: 
+        AccelerateConfiguration
+      AccessControl: String
+      AnalyticsConfigurations: 
+        - AnalyticsConfiguration
+      BucketEncryption: 
+        BucketEncryption
+      BucketName: String
+      CorsConfiguration: 
+        CorsConfiguration
+      InventoryConfigurations: 
+        - InventoryConfiguration
+      LifecycleConfiguration: 
+        LifecycleConfiguration
+      LoggingConfiguration: 
+        LoggingConfiguration
+      MetricsConfigurations: 
+        - MetricsConfiguration
+      NotificationConfiguration: 
+        NotificationConfiguration
+      ObjectLockConfiguration: 
+        ObjectLockConfiguration
+      ObjectLockEnabled: Boolean
+      PublicAccessBlockConfiguration: 
+        PublicAccessBlockConfiguration
+      ReplicationConfiguration: 
+        ReplicationConfiguration
+      Tags: 
+        - Tag
+      VersioningConfiguration: 
+        VersioningConfiguration
+      WebsiteConfiguration: 
+        WebsiteConfiguration

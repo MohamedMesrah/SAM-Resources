@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Serverless SimpleTable
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-simpletable.html
+
+Resources:
+  SimpleTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey: PrimaryKeyObject
+      ProvisionedThroughput: ProvisionedThroughput
+      SSESpecification: SSESpecification
+      TableName: String
+      Tags: Map
+

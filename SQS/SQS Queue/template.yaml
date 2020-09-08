@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: SQS Queue
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html
+Resources:
+  SQSQueue:
+    Type: AWS::SQS::Queue
+    Properties: 
+      ContentBasedDeduplication: Boolean
+      DelaySeconds: Integer
+      FifoQueue: Boolean
+      KmsDataKeyReusePeriodSeconds: Integer
+      KmsMasterKeyId: String
+      MaximumMessageSize: Integer
+      MessageRetentionPeriod: Integer
+      QueueName: String
+      ReceiveMessageWaitTimeSeconds: Integer
+      RedrivePolicy: Json
+      Tags: 
+        - Tag
+      VisibilityTimeout: Integer

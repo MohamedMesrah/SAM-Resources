@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Serverless Function
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html
+
+Resources:    
+  ServerlessLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      AssumeRolePolicyDocument: JSON
+      AutoPublishAlias: String
+      AutoPublishCodeSha256: String
+      CodeUri: String | FunctionCode
+      DeadLetterQueue: Map | DeadLetterQueue
+      DeploymentPreference: DeploymentPreference
+      Description: A Lambda function that returns a static string.
+      Environment: Environment
+      EventInvokeConfig: EventInvokeConfiguration
+      Events: EventSource
+      FileSystemConfigs: List
+      FunctionName: String
+      Handler: src/handlers/hello-from-lambda.helloFromLambdaHandler
+      InlineCode: String
+      KmsKeyArn: String
+      Layers: List
+      MemorySize: 128
+      PermissionsBoundary: String
+      Policies: 
+          - AWSLambdaBasicExecutionRole
+      ProvisionedConcurrencyConfig: ProvisionedConcurrencyConfig
+      ReservedConcurrentExecutions: Integer
+      Role: String
+      Runtime: nodejs12.x
+      Tags: Map
+      Timeout: 100
+      Tracing: String
+      VersionDescription: String
+      VpcConfig: VpcConfig

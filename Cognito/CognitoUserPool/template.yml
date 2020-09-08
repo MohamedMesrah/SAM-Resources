@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Cognito User Pool
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html
+  CognitoUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties: 
+      AccountRecoverySetting: AccountRecoverySetting
+      AdminCreateUserConfig: AdminCreateUserConfig
+      AliasAttributes: 
+        - String
+      AutoVerifiedAttributes: 
+        - String
+      DeviceConfiguration: DeviceConfiguration
+      EmailConfiguration: EmailConfiguration
+      EmailVerificationMessage: String
+      EmailVerificationSubject: String
+      EnabledMfas: 
+        - String
+      LambdaConfig: 
+        LambdaConfig
+      MfaConfiguration: String
+      Policies: 
+        Policies
+      Schema: 
+        - SchemaAttribute
+      SmsAuthenticationMessage: String
+      SmsConfiguration: SmsConfiguration
+      SmsVerificationMessage: String
+      UsernameAttributes: 
+        - String
+      UsernameConfiguration: UsernameConfiguration
+      UserPoolAddOns: UserPoolAddOns
+      UserPoolName: String
+      UserPoolTags: Json
+      VerificationMessageTemplate: VerificationMessageTemplate

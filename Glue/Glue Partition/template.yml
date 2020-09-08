@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Glue Partition
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html
+
+Resources:
+  GluePartition:
+    Type: AWS::Glue::Partition
+    Properties: 
+      CatalogId: String
+      DatabaseName: String
+      PartitionInput: 
+        PartitionInput
+      TableName: String

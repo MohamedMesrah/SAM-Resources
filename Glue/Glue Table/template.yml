@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Glue Table
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html
+
+Resources:
+  GlueTable:
+    Type: AWS::Glue::Table
+    Properties: 
+      CatalogId: String
+      DatabaseName: String
+      TableInput: 
+        TableInput

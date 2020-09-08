@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Glue Job
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html
+
+Resources:
+  GlueJob:
+    Type: AWS::Glue::Job
+    Properties: 
+      AllocatedCapacity: Double
+      Command: 
+        JobCommand
+      Connections: 
+        ConnectionsList
+      DefaultArguments: Json
+      Description: String
+      ExecutionProperty: 
+        ExecutionProperty
+      GlueVersion: String
+      LogUri: String
+      MaxCapacity: Double
+      MaxRetries: Double
+      Name: String
+      NotificationProperty: 
+        NotificationProperty
+      NumberOfWorkers: Integer
+      Role: String
+      SecurityConfiguration: String
+      Tags: Json
+      Timeout: Integer
+      WorkerType: String

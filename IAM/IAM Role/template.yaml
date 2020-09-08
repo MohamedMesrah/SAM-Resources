@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: IAM Role
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
+
+Resources:
+  IAMRole:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument: Json
+      Description: String
+      ManagedPolicyArns: 
+        - String
+      MaxSessionDuration: Integer
+      Path: String
+      PermissionsBoundary: String
+      Policies: 
+        - Policy
+      RoleName: String
+      Tags: 
+        - Tag

@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: IAM Policy
+Transform: AWS::Serverless-2016-10-31
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html
+
+Resources:
+  IAMPolicy:
+    Type: AWS::IAM::Policy
+    Properties: 
+      Groups: 
+        - String
+      PolicyDocument: Json
+      PolicyName: String
+      Roles: 
+        - String
+      Users: 
+        - String
+
